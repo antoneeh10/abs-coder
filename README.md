@@ -83,7 +83,7 @@ After installation, open the installed ABS CODER™ directory.
 
 Example:
 
-    cd ABS-CODER
+    cd abs-coder
 
 Run by opening:
 

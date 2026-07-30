@@ -20,6 +20,7 @@ ABS CODER™ is a proprietary encoding engine designed to transform plain text i
 - 🌙 Dark mode support
 - 📱 Progressive Web App (PWA) support
 - 🖥️ Browser-based runtime console
+- ⚙️ Automated installation system
 
 ## 🚀 Usage
 
@@ -35,35 +36,37 @@ To decode:
 2. Click **Decode Text**
 3. The original text will be restored if the structure is valid
 
+## 📥 Installation
+
+ABS CODER™ provides an automated installer for supported environments.
+
+Install using:
+
+    curl -fsSL https://abs-coder.vwebapp.workers.dev/install.sh | bash
+
+The installer will prepare ABS CODER™ files and configure the local environment.
+
 ## ▶️ Running ABS CODER™
 
-ABS CODER™ currently runs as a browser-based application.
+After installation, ABS CODER™ can be launched through the web console.
 
-Open the web console:
+Open:
 
     https://abs-coder.vwebapp.workers.dev/
 
-The application will automatically load the ABS CODER™ runtime.
+ABS CODER™ runs directly inside a modern browser without requiring additional runtime installation.
 
-Supported browsers:
-
-- Google Chrome
-- Microsoft Edge
-- Firefox
-- Chromium-based browsers
-
-## 📱 Installation (PWA)
+## 📱 PWA Installation
 
 ABS CODER™ supports Progressive Web App installation.
 
-To install:
+Steps:
 
-1. Open ABS CODER™ Web Console
-2. Open browser menu
-3. Select **Install App** or **Add to Home Screen**
-4. Launch ABS CODER™ from your device application list
+1. Open ABS CODER™ web console
+2. Select "Install App" from browser menu
+3. Launch ABS CODER™ from application list
 
-No additional software installation is required.
+Installed PWA mode provides an app-like experience with offline support when available.
 
 ## 📦 ABS6 Format Structure
 
@@ -97,11 +100,11 @@ Contains internal format information:
 
 ### [noise]
 
-Contains additional structural elements used for payload organization.
+Contains structural elements used for payload organization.
 
 ### [data]
 
-Contains encoded token data processed by the ABS decoder engine.
+Contains encoded token data that can be restored through the ABS decoder engine.
 
 ## 🏗️ Technology
 
@@ -120,47 +123,29 @@ Built with:
     ├── index.html
     ├── manifest.json
     ├── sw.js
-    │
     ├── config/
     │   └── abs.config.json
     │
-    └── files/
-        └── abs-coder-v6.zip
+    ├── files/
+    │   └── abs-coder-v6.zip
+    │
+    └── install.sh
 
 ## 💻 Supported Environment
 
 Recommended:
 
 - Linux
-- Android
-- Windows
-- macOS
+- Termux (Android)
+- WSL
 - Modern desktop browsers
 
 Requirements:
 
 - Modern web browser
-- Internet connection for first access
-
-## ⚙️ Deployment
-
-ABS CODER™ can be deployed using:
-
-- Cloudflare Workers
-- Static Web Hosting
-- Local Web Server
-
-Example local run:
-
-    Open index.html in a browser
-
-or use a local server:
-
-    python -m http.server 8080
-
-Then open:
-
-    http://localhost:8080
+- Bash shell (for installer)
+- curl
+- Internet connection for initial installation
 
 ## ⚠️ Disclaimer
 

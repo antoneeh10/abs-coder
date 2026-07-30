@@ -312,4 +312,4 @@ ABS CODER™ does not provide cryptographic security and should not be used for 
 
 MIT License
 
-Copyright © ABS Team
+Copyright © antoneeh10

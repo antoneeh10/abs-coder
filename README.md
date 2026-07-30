@@ -48,7 +48,7 @@ ABS CODER™ can be accessed directly through the online web console without ins
 
 Open:
 
-    https://abs-coder.vwebapp.workers.dev/
+    https://abs-coder.vwebapp.workers.dev/en
 
 Web Mode runs directly inside a modern browser.
 
@@ -81,7 +81,7 @@ After installation, ABS CODER™ can be launched locally using a Python web serv
 
 Open:
 
-    https://abs-coder.vwebapp.workers.dev/
+    https://abs-coder.vwebapp.workers.dev/en
 
 ABS CODER™ will start directly from the browser.
 

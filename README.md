@@ -38,23 +38,60 @@ To decode:
 
 ## 📥 Installation
 
-ABS CODER™ provides an automated installer for supported environments.
+ABS CODER™ supports two running modes:
 
-Install using:
+## 🌐 Web Mode
 
-    curl -fsSL https://abs-coder.vwebapp.workers.dev/install.sh | bash
-
-The installer will prepare ABS CODER™ files and configure the local environment.
-
-## ▶️ Running ABS CODER™
-
-After installation, ABS CODER™ can be launched through the web console.
+ABS CODER™ can be accessed instantly through the online web console without installation.
 
 Open:
 
     https://abs-coder.vwebapp.workers.dev/
 
-ABS CODER™ runs directly inside a modern browser without requiring additional runtime installation.
+Web Mode runs directly inside a modern browser.
+
+No additional setup or local files are required.
+
+## 💻 Local Mode
+
+ABS CODER™ can also be installed locally on supported environments.
+
+Install using:
+
+    curl -fsSL https://abs-coder.vwebapp.workers.dev/install.sh | bash
+
+The installer will:
+
+- Download ABS CODER™ files
+- Prepare the local project structure
+- Configure required files
+- Install the local version of ABS CODER™
+
+## ▶️ Running ABS CODER™
+
+### 🌐 Run Online
+
+Open the web console:
+
+    https://abs-coder.vwebapp.workers.dev/
+
+ABS CODER™ will start directly from the browser.
+
+### 💻 Run Locally
+
+After installation, open the installed ABS CODER™ directory.
+
+Example:
+
+    cd ABS-CODER
+
+Run by opening:
+
+    index.html
+
+ABS CODER™ will launch using your default browser.
+
+Local Mode allows ABS CODER™ to run from your own device without opening the online console.
 
 ## 📱 PWA Installation
 
@@ -66,7 +103,7 @@ Steps:
 2. Select "Install App" from browser menu
 3. Launch ABS CODER™ from application list
 
-Installed PWA mode provides an app-like experience with offline support when available.
+Installed PWA mode provides an app-like experience with optional offline support.
 
 ## 📦 ABS6 Format Structure
 
@@ -146,6 +183,37 @@ Requirements:
 - Bash shell (for installer)
 - curl
 - Internet connection for initial installation
+
+## 🔄 Execution Flow
+
+ABS CODER™ provides two execution methods:
+
+    Online Mode
+
+    Browser
+       |
+       v
+    Cloudflare Workers
+       |
+       v
+    ABS CODER™ Web Console
+
+
+    Local Mode
+
+    curl install.sh
+       |
+       v
+    Download ABS CODER™ files
+       |
+       v
+    Local Project Directory
+       |
+       v
+    index.html
+       |
+       v
+    Browser Runtime
 
 ## ⚠️ Disclaimer
 

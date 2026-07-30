@@ -36,13 +36,15 @@ To decode:
 2. Click **Decode Text**
 3. The original text will be restored if the structure is valid
 
-## 📥 Installation
+---
 
-ABS CODER™ supports two running modes:
+# 📥 Installation
+
+ABS CODER™ supports two execution modes:
 
 ## 🌐 Web Mode
 
-ABS CODER™ can be accessed instantly through the online web console without installation.
+ABS CODER™ can be accessed directly through the online web console without installation.
 
 Open:
 
@@ -50,11 +52,13 @@ Open:
 
 Web Mode runs directly inside a modern browser.
 
-No additional setup or local files are required.
+No additional setup is required.
+
+---
 
 ## 💻 Local Mode
 
-ABS CODER™ can also be installed locally on supported environments.
+ABS CODER™ can be installed and executed locally on your device.
 
 Install using:
 
@@ -63,37 +67,98 @@ Install using:
 The installer will:
 
 - Download ABS CODER™ files
-- Prepare the local project structure
-- Configure required files
-- Install the local version of ABS CODER™
+- Prepare the local project directory
+- Check required dependencies
+- Configure the local runtime environment
 
-## ▶️ Running ABS CODER™
+After installation, ABS CODER™ can be launched locally using a Python web server.
 
-### 🌐 Run Online
+---
 
-Open the web console:
+# ▶️ Running ABS CODER™
+
+## 🌐 Run Online
+
+Open:
 
     https://abs-coder.vwebapp.workers.dev/
 
 ABS CODER™ will start directly from the browser.
 
-### 💻 Run Locally
+---
 
-After installation, open the installed ABS CODER™ directory.
+## 💻 Run Locally
 
-Example:
+Navigate to the ABS CODER™ directory:
 
     cd abs-coder
 
-Run by opening:
+Start the local server:
 
-    index.html
+    python3 -m http.server 8080
 
-ABS CODER™ will launch using your default browser.
+Then open:
 
-Local Mode allows ABS CODER™ to run from your own device without opening the online console.
+    http://localhost:8080/
 
-## 📱 PWA Installation
+ABS CODER™ will run from your local device through your browser.
+
+---
+
+# 🐍 Python Requirement
+
+Local Mode requires Python 3 for running the local web server.
+
+Check Python installation:
+
+    python3 --version
+
+If Python is not installed, follow the guide below.
+
+## Linux (Debian / Ubuntu)
+
+Install Python:
+
+    sudo apt update
+    sudo apt install python3
+
+Verify:
+
+    python3 --version
+
+
+## Termux (Android)
+
+Update package:
+
+    pkg update
+
+Install Python:
+
+    pkg install python
+
+Verify:
+
+    python --version
+
+
+## Windows
+
+Download Python from:
+
+    https://www.python.org/downloads/
+
+During installation, enable:
+
+    Add Python to PATH
+
+Verify:
+
+    python --version
+
+---
+
+# 📱 PWA Installation
 
 ABS CODER™ supports Progressive Web App installation.
 
@@ -105,7 +170,9 @@ Steps:
 
 Installed PWA mode provides an app-like experience with optional offline support.
 
-## 📦 ABS6 Format Structure
+---
+
+# 📦 ABS6 Format Structure
 
 Example:
 
@@ -124,9 +191,11 @@ Example:
     [data]
     <token><token><token>
 
-## 🧩 Format Sections
+---
 
-### [metadata]
+# 🧩 Format Sections
+
+## [metadata]
 
 Contains internal format information:
 
@@ -135,15 +204,17 @@ Contains internal format information:
 - Seed value
 - Checksum data
 
-### [noise]
+## [noise]
 
 Contains structural elements used for payload organization.
 
-### [data]
+## [data]
 
 Contains encoded token data that can be restored through the ABS decoder engine.
 
-## 🏗️ Technology
+---
+
+# 🏗️ Technology
 
 Built with:
 
@@ -152,8 +223,11 @@ Built with:
 - Tailwind CSS
 - Progressive Web App API
 - Cloudflare Workers Runtime
+- Python Local HTTP Server
 
-## 📁 Project Structure
+---
+
+# 📁 Project Structure
 
     ABS-CODER/
     │
@@ -168,27 +242,11 @@ Built with:
     │
     └── install.sh
 
-## 💻 Supported Environment
+---
 
-Recommended:
+# 🔄 Execution Flow
 
-- Linux
-- Termux (Android)
-- WSL
-- Modern desktop browsers
-
-Requirements:
-
-- Modern web browser
-- Bash shell (for installer)
-- curl
-- Internet connection for initial installation
-
-## 🔄 Execution Flow
-
-ABS CODER™ provides two execution methods:
-
-    Online Mode
+## Online Mode
 
     Browser
        |
@@ -199,23 +257,48 @@ ABS CODER™ provides two execution methods:
     ABS CODER™ Web Console
 
 
-    Local Mode
+## Local Mode
 
     curl install.sh
        |
        v
-    Download ABS CODER™ files
+    Download ABS CODER™ Files
        |
        v
     Local Project Directory
        |
        v
-    index.html
+    Python HTTP Server
        |
        v
-    Browser Runtime
+    Browser localhost
+       |
+       v
+    ABS CODER™ Runtime
 
-## ⚠️ Disclaimer
+---
+
+# 💻 Supported Environment
+
+Recommended:
+
+- Linux
+- Termux (Android)
+- Windows
+- WSL
+- Modern desktop browsers
+
+Requirements:
+
+- Modern web browser
+- Python 3 (Local Mode)
+- Bash shell (for installer)
+- curl
+- Internet connection for initial installation
+
+---
+
+# ⚠️ Disclaimer
 
 ABS CODER™ is a custom symbolic encoding format created for experimental, educational, and application simulation purposes.
 
@@ -223,7 +306,9 @@ It is not intended to replace industry-standard encryption systems.
 
 ABS CODER™ does not provide cryptographic security and should not be used for protecting sensitive information.
 
-## 📜 License
+---
+
+# 📜 License
 
 MIT License
 

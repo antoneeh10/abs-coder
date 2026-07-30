@@ -2,7 +2,7 @@
 
 echo "Installing ABS CODER..."
 
-curl -L https://domain.com/abs-coder-v6.zip -o abs-coder.zip
+curl -L https://abs-coder.vwebapp.workers.dev/files/abs-coder-v6.zip -o abs-coder.zip
 
 unzip abs-coder.zip -d abs-coder
 
